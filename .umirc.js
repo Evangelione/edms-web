@@ -1,4 +1,3 @@
-
 // ref: https://umijs.org/config/
 export default {
   plugins: [
@@ -16,4 +15,5 @@ export default {
       hardSource: false,
     }],
   ],
+  theme: './src/theme.js',
 }

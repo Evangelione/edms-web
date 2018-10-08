@@ -1,12 +1,19 @@
-import styles from './index.css';
+import { Layout } from 'antd'
+import Sider from './Sider'
+import Header from './Header'
+import Content from './Content'
+import styles from './index.css'
 
-function BasicLayout(props) {
+const BasicLayout = (props) => {
   return (
-    <div className={styles.normal}>
-      <h1 className={styles.title}>Yay! Welcome to umi!</h1>
-      { props.children }
-    </div>
-  );
+    <Layout style={{height: '100vh'}}>
+      <Sider />
+      <Layout>
+        <Header />
+        <Content />
+      </Layout>
+    </Layout>
+  )
 }
 
-export default BasicLayout;
+export default BasicLayout

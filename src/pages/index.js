@@ -1,4 +1,4 @@
-import styles from './index.css';
+import styles from './index.css'
 
 export default function() {
   return (
@@ -9,5 +9,5 @@ export default function() {
         <li><a href="https://umijs.org/guide/getting-started.html">Getting Started</a></li>
       </ul>
     </div>
-  );
+  )
 }
