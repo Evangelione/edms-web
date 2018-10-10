@@ -1,0 +1,56 @@
+.login-pic {
+  height: 100%;
+  overflow: hidden;
+  background: url('../../assets/image/qianduan_login_bg.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.admin-pic {
+  height: 100%;
+  overflow: hidden;
+  background: url('../../assets/image/houtai_login_bg.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.login-card {
+  width: 480px;
+  height: 610px;
+  margin: 150px auto 0;
+  border-radius: 12px;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 32px;
+  color: #3477ED;
+  font-family: PingFangHK-Regular;
+  margin-top: 70px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 35px auto;
+}
+
+.login-form > div {
+  margin-bottom: 40px;
+}
+
+.login-form-input {
+  height: 60px;
+}
+
+.login-form-input > input {
+  padding-left: 50px !important;
+  font-size: 18px;
+  border-radius: 12px;
+}
+
+.login-form-button {
+  width: 100%;
+  height: 60px;
+  border-radius: 12px;
+  font-size: 22px;
+  background: #3477ED;
+  margin-top: 40px;
+}

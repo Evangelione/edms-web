@@ -2,9 +2,9 @@ import { Layout } from 'antd'
 
 const {Content} = Layout
 
-const _Content = () => {
+const _Content = ({children}) => {
   return (
-    <Content>content</Content>
+    <Content>{children}</Content>
   )
 }
 

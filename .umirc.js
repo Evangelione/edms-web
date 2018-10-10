@@ -15,5 +15,11 @@ export default {
       hardSource: false,
     }],
   ],
-  theme: './src/theme.js',
+  theme: './src/common/theme.js',
+  // proxy: {
+  //   '/sockjs-node/': {
+  //     'target': 'http://127.0.0.1:8000/',
+  //     'changeOrigin': true,
+  //   },
+  // },
 }

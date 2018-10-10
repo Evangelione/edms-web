@@ -1,86 +1,143 @@
 import { Layout, Menu, Icon } from 'antd'
 import { connect } from 'dva'
+import { withRouter } from 'react-router'
 import Link from 'umi/link'
+import { menuData } from '../common/menu'
+import { LOGO } from '../common/constants'
 import styles from './index.css'
-import { LOGO } from '../constants'
 
 const {Sider} = Layout
 const SubMenu = Menu.SubMenu
 const logo = window.location.hostname.match(/[A-Za-z]+/g)[0]
-
 const IconFont = Icon.createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_778336_quvbaq5vn7.js',
 })
+const getIcon = icon => {
+  if (typeof icon === 'string' && icon.indexOf('http') === 0) {
+    return <img src={icon} alt="icon" className={`${styles.icon} sider-menu-item-img`} />
+  }
+  if (typeof icon === 'string') {
+    return <IconFont type={icon} />
+  }
+  return icon
+}
 
-const _Sider = ({currentKey, openKeys}) => {
+const _Sider = ({dispatch, location, currentKey, openKeys, Authorized}) => {
 
-  function onSelect({key}) {
-    if (key !== 'balance' && key !== 'analysis') {
-      this.setState({
-        openKeys: [],
+  function getMenuItems(menusData) {
+    if (!menusData) {
+      return []
+    }
+    return menusData
+      .filter(item => item.name && !item.hideInMenu)
+      .map(item => {
+        // make dom
+        const ItemDom = getSubMenuOrItem(item)
+        return checkPermissionItem(item.authority, ItemDom)
       })
+  }
+
+  function getSubMenuOrItem(item) {
+    if (item.children && item.children.some(child => child.name)) {
+      const childrenItems = getMenuItems(item.children)
+      // 当无子菜单时就不展示菜单
+      if (childrenItems && childrenItems.length > 0) {
+        return (
+          <SubMenu
+            title={
+              item.iconfont ? (
+                <span>
+                  {getIcon(item.iconfont)}
+                  <span>{item.name}</span>
+                </span>
+              ) : (
+                item.name
+              )
+            }
+            key={item.path}
+          >
+            {childrenItems}
+          </SubMenu>
+        )
+      }
+      return null
+    } else {
+      return <Menu.Item key={item.path} ischild={item.ischild}>{getLinkItem(item)}</Menu.Item>
     }
   }
 
-  function onOpenChange(openKeys) {
-    const latestOpenKey = openKeys.find(key => this.state.openKeys.indexOf(key) === -1)
-    if (this.rootSubmenuKeys.indexOf(latestOpenKey) === -1) {
-      this.setState({openKeys})
-    } else {
-      this.setState({
-        openKeys: latestOpenKey ? [latestOpenKey] : [],
+  function getLinkItem(item) {
+    const icon = getIcon(item.iconfont)
+    const {name} = item
+    return (
+      <Link
+        to={item.path}
+      >
+        {icon}
+        <span>{name}</span>
+      </Link>
+    )
+  }
+
+  function checkPermissionItem(authority, ItemDom) {
+    if (Authorized && Authorized.check) {
+      const {check} = Authorized
+      return check(authority, ItemDom)
+    }
+    return ItemDom
+  }
+
+  function onSelect(dom) {
+    if (!dom.item.props.ischild) {
+      dispatch({
+        type: 'sider/save',
+        payload: {
+          openKeys: [],
+        },
       })
     }
+    dispatch({
+      type: 'sider/save',
+      payload: {
+        currentKey: dom.selectedKeys,
+      },
+    })
+  }
+
+  function onOpenChange(Keys) {
+    const latestOpenKey = Keys.find(key => openKeys.indexOf(key) === -1)
+    dispatch({
+      type: 'sider/save',
+      payload: {
+        openKeys: latestOpenKey ? [latestOpenKey] : [],
+      },
+    })
   }
 
   return (
     <Sider>
       <div className={styles.logo} style={{backgroundImage: `url(${LOGO[logo].logo})`}} />
       <Menu
-        defaultSelectedKeys={currentKey}
-        defaultOpenKeys={openKeys}
+        selectedKeys={currentKey}
+        openKeys={openKeys}
+        onSelect={onSelect}
+        onOpenChange={onOpenChange}
         mode="inline"
         theme="dark"
       >
-        <Menu.Item key="1">
-          <IconFont type="icon-shouye" />
-          <span>首页</span>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <IconFont type="icon-wodedingdan" />
-          <span>我的订单</span>
-        </Menu.Item>
-        <Menu.Item key="3">
-          <IconFont type="icon-wodewuliu" />
-          <span>我的物流</span>
-        </Menu.Item>
-        <SubMenu key="sub1" title={<span><IconFont type="icon-wodezhangwu" /><span>我的账务</span></span>}>
-          <Menu.Item key="5">余额管理</Menu.Item>
-          <Menu.Item key="6">数据分析</Menu.Item>
-        </SubMenu>
-        <Menu.Item key="7">
-          <IconFont type="icon-wodekehu" />
-          <span>我的客户</span>
-        </Menu.Item>
-        <Menu.Item key="8">
-          <IconFont type="icon-wodegongyingshang_" />
-          <span>我的供应商</span>
-        </Menu.Item>
-        <Menu.Item key="9">
-          <IconFont type="icon-wodegongsi" />
-          <span>我的公司</span>
-        </Menu.Item>
+        {getMenuItems(menuData)}
       </Menu>
     </Sider>
   )
 }
 
 function mapStateToProps(state) {
-  const {currentKey, openKeys} = state.sider
+  const {currentKey, openKeys, rootSubmenuKeys} = state.sider
   return {
     currentKey,
     openKeys,
+    rootSubmenuKeys,
   }
 }
 
-export default connect(mapStateToProps)(_Sider)
+export default connect(mapStateToProps)(withRouter(_Sider))

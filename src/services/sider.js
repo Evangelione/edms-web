@@ -1,5 +1,5 @@
 import request from '../utils/request'
-import { IP } from '../constants'
+import { IP } from '../common/constants'
 
 export function count({ flag }) {
   let formData = new FormData()
