@@ -8,6 +8,18 @@ body {
   margin: 0;
 }
 
+.page-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*antd样式覆盖*/
+.ant-card {
+  border-radius: 4px;
+}
+
+/*登录页*/
 #special .ant-form-explain, .ant-form-extra {
   margin-top: 20px;
   font-size: 16px;

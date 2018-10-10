@@ -1,7 +1,9 @@
 import { Layout } from 'antd'
 import Sider from './Sider'
 import Header from './Header'
-import Content from './Content'
+import styles from './index.css'
+
+const {Content} = Layout
 
 const BasicLayout = ({location, children}) => {
   if (location.pathname === '/login' || location.pathname === '/admin') {
@@ -14,7 +16,7 @@ const BasicLayout = ({location, children}) => {
       <Sider />
       <Layout>
         <Header />
-        <Content children={children} />
+        <Content className={styles.content}>{children}</Content>
       </Layout>
     </Layout>
   )

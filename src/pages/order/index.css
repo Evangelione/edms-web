@@ -1,0 +1,215 @@
+.grayFont {
+  color: #6A758A;
+}
+
+.blueFont {
+  color: #3477ED;
+}
+
+.quanbuGray {
+  width: 26px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) 0 0;
+  vertical-align: middle;
+}
+
+.quanbuBlue {
+  width: 26px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) 0 30px;
+  vertical-align: middle;
+}
+
+.daizhifuGray {
+  width: 28px;
+  height: 27px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -73px 0;
+  vertical-align: middle;
+}
+
+.daizhifuBlue {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -73px 30px;
+  vertical-align: middle;
+}
+
+.daifahuoGray {
+  width: 31px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -446px 0;
+  vertical-align: middle;
+}
+
+.daifahuoBlue {
+  width: 31px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -446px 30px;
+  vertical-align: middle;
+}
+
+.daishouhuoGray {
+  width: 31px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -219px -1px;
+  vertical-align: middle;
+}
+
+.daishouhuoBlue {
+  width: 31px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -219px 29px;
+  vertical-align: middle;
+}
+
+.daijiesuanGray {
+  width: 28px;
+  height: 29px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -298px -1px;
+  vertical-align: middle;
+}
+
+.daijiesuanBlue {
+  width: 28px;
+  height: 29px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -298px 29px;
+  vertical-align: middle;
+}
+
+.yijiesuanGray {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -373px -1px;
+  vertical-align: middle;
+}
+
+.yijiesuanBlue {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/dingdanzhaungtai_icon.png) -373px 29px;
+  vertical-align: middle;
+}
+
+.daidiaoduGray {
+  width: 28px;
+  height: 29px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -63px 0px;
+  vertical-align: middle;
+}
+
+.daidiaoduBlue {
+  width: 28px;
+  height: 29px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -63px 31px;
+  vertical-align: middle;
+}
+
+.daijiedanGray {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -127px -1px;
+  vertical-align: middle;
+}
+
+.daijiedanBlue {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -127px 30px;
+  vertical-align: middle;
+}
+
+.yijiedanGray {
+  width: 38px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -193px 0px;
+  vertical-align: middle;
+}
+
+.yijiedanBlue {
+  width: 38px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -193px 31px;
+  vertical-align: middle;
+}
+
+.yunshuzhongGray {
+  width: 38px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -269px 0px;
+  vertical-align: middle;
+}
+
+.yunshuzhongBlue {
+  width: 38px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -269px 31px;
+  vertical-align: middle;
+}
+
+.yixiecheGray {
+  width: 29px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -347px -2px;
+  vertical-align: middle;
+}
+
+.yixiecheBlue {
+  width: 29px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -347px 29px;
+  vertical-align: middle;
+}
+
+.yiwanchengGray {
+  width: 28px;
+  height: 31px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -417px 0px;
+  vertical-align: middle;
+}
+
+.yiwanchengBlue {
+  width: 28px;
+  height: 31px;
+  display: inline-block;
+  background: url(../../assets/image/yundanzhuangtai_icon.png) -417px 31px;
+  vertical-align: middle;
+}
+
+.daiquerenGray {
+  width: 31px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/daiquerenGray.png);
+  vertical-align: middle;
+}
+
+.daiquerenBlue {
+  width: 31px;
+  height: 28px;
+  display: inline-block;
+  background: url(../../assets/image/daiquerenBlue.png);
+  vertical-align: middle;
+}
