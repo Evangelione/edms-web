@@ -14,6 +14,28 @@ body {
   margin-bottom: 20px;
 }
 
+.toolBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.changeList > div {
+  display: inline-block;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.changeList > div > span {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.changeList > div > div {
+  vertical-align: middle;
+}
+
 /*antd样式覆盖*/
 .ant-card {
   border-radius: 4px;

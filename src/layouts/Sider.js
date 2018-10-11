@@ -2,8 +2,7 @@ import { Layout, Menu, Icon } from 'antd'
 import { connect } from 'dva'
 import { withRouter } from 'react-router'
 import Link from 'umi/link'
-import { menuData } from '../common/menu'
-import { LOGO } from '../common/constants'
+import { menuData, LOGO } from '../common/constants'
 import styles from './index.css'
 
 const {Sider} = Layout
