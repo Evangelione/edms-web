@@ -5,7 +5,6 @@ export default {
   state: {
     currentKey: ['/'],
     openKeys: [],
-    rootSubmenuKeys: [],
   },
 
   subscriptions: {
@@ -15,6 +14,10 @@ export default {
           type: 'save', payload: {
             currentKey: [pathname],
           },
+        })
+        dispatch({
+          type: `${pathname.substr(1)}/fetch`,
+          payload: {},
         })
       })
     },

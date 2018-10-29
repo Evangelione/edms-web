@@ -1,25 +1,13 @@
-import { Layout, Menu, Icon } from 'antd'
+import { Layout, Menu } from 'antd'
 import { connect } from 'dva'
 import { withRouter } from 'react-router'
 import Link from 'umi/link'
-import { menuData, LOGO } from '../common/constants'
+import { menuData, LOGO, getIcon } from '../common/constants'
 import styles from './index.css'
 
 const {Sider} = Layout
 const SubMenu = Menu.SubMenu
 const logo = window.location.hostname.match(/[A-Za-z]+/g)[0]
-const IconFont = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_778336_quvbaq5vn7.js',
-})
-const getIcon = icon => {
-  if (typeof icon === 'string' && icon.indexOf('http') === 0) {
-    return <img src={icon} alt="icon" className={`${styles.icon} sider-menu-item-img`} />
-  }
-  if (typeof icon === 'string') {
-    return <IconFont type={icon} />
-  }
-  return icon
-}
 
 const _Sider = ({dispatch, location, currentKey, openKeys, Authorized}) => {
 
@@ -101,6 +89,10 @@ const _Sider = ({dispatch, location, currentKey, openKeys, Authorized}) => {
         currentKey: dom.selectedKeys,
       },
     })
+    dispatch({
+      type: `${dom.key.substr(1)}/fetch`,
+      payload: {},
+    })
   }
 
   function onOpenChange(Keys) {
@@ -131,11 +123,10 @@ const _Sider = ({dispatch, location, currentKey, openKeys, Authorized}) => {
 }
 
 function mapStateToProps(state) {
-  const {currentKey, openKeys, rootSubmenuKeys} = state.sider
+  const {currentKey, openKeys} = state.sider
   return {
     currentKey,
     openKeys,
-    rootSubmenuKeys,
   }
 }
 

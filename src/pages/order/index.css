@@ -6,210 +6,121 @@
   color: #3477ED;
 }
 
-.quanbuGray {
-  width: 26px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) 0 0;
-  vertical-align: middle;
+.currentOrder {
+  border: 1px solid #54A8FD !important;
 }
 
-.quanbuBlue {
-  width: 26px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) 0 30px;
-  vertical-align: middle;
+.orderTitle {
+  position: relative;
+  color: #545F76;
+  font-size: 16px;
+  padding: 2px 25px;
+  font-weight: 600;
 }
 
-.daizhifuGray {
-  width: 28px;
-  height: 27px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -73px 0;
-  vertical-align: middle;
+.orderNumber {
+  margin-right: 25px;
 }
 
-.daizhifuBlue {
-  width: 28px;
-  height: 28px;
+.orderGasName {
   display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -73px 30px;
-  vertical-align: middle;
+  margin-left: 30px;
+  margin-bottom: 20px;
 }
 
-.daifahuoGray {
-  width: 31px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -446px 0;
-  vertical-align: middle;
+.orderStatus {
+  float: right;
+  font-size: 12px;
+  padding: 0px 10px;
+  font-weight: 400;
 }
 
-.daifahuoBlue {
-  width: 31px;
-  height: 28px;
+.orderStatusDot {
+  width: 6px;
+  height: 6px;
   display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -446px 30px;
   vertical-align: middle;
+  border-radius: 3px;
+  margin-top: -3px;
+  margin-right: 5px;
 }
 
-.daishouhuoGray {
-  width: 31px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -219px -1px;
-  vertical-align: middle;
+.orderWeight {
+  position: absolute;
+  top: 27px;
+  left: 86px;
+  font-size: 14px;
+  color: #0087FE;
 }
 
-.daishouhuoBlue {
-  width: 31px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -219px 29px;
-  vertical-align: middle;
+.orderPrice {
+  position: absolute;
+  top: 27px;
+  left: 148px;
+  font-size: 14px;
+  color: #cc2020;
 }
 
-.daijiesuanGray {
-  width: 28px;
-  height: 29px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -298px -1px;
-  vertical-align: middle;
+.orderCustomer {
+  position: absolute;
+  top: 0px;
+  left: 320px;
+  font-size: 12px;
+  color: #6C6C6C;
+  font-weight: 400;
 }
 
-.daijiesuanBlue {
-  width: 28px;
-  height: 29px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -298px 29px;
-  vertical-align: middle;
+.orderSite {
+  position: absolute;
+  top: 20px;
+  left: 320px;
+  font-size: 12px;
+  color: #6C6C6C;
+  font-weight: 400;
 }
 
-.yijiesuanGray {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -373px -1px;
-  vertical-align: middle;
+.upArrow {
+  position: absolute;
+  top: 20px;
+  left: 25px;
 }
 
-.yijiesuanBlue {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/dingdanzhaungtai_icon.png) -373px 29px;
-  vertical-align: middle;
+.upArrow:after {
+  content: '';
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgb(255, 154, 116);
+  position: absolute;
+  top: -5px;
+  left: 41px;
 }
 
-.daidiaoduGray {
-  width: 28px;
-  height: 29px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -63px 0px;
-  vertical-align: middle;
+.showMapBtn {
+  background-color: rgb(255, 154, 116);
+  border-color: rgb(255, 154, 116);
+  color: rgb(255, 255, 255);
 }
 
-.daidiaoduBlue {
-  width: 28px;
-  height: 29px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -63px 31px;
-  vertical-align: middle;
+.showMapBtn:hover {
+  background-color: rgb(255, 154, 116);
+  border-color: rgb(255, 154, 116);
+  color: rgb(255, 255, 255);
 }
 
-.daijiedanGray {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -127px -1px;
-  vertical-align: middle;
+.detailTitle {
+  color: #545F76;
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 8px;
 }
 
-.daijiedanBlue {
-  width: 28px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -127px 30px;
-  vertical-align: middle;
-}
-
-.yijiedanGray {
-  width: 38px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -193px 0px;
-  vertical-align: middle;
-}
-
-.yijiedanBlue {
-  width: 38px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -193px 31px;
-  vertical-align: middle;
-}
-
-.yunshuzhongGray {
-  width: 38px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -269px 0px;
-  vertical-align: middle;
-}
-
-.yunshuzhongBlue {
-  width: 38px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -269px 31px;
-  vertical-align: middle;
-}
-
-.yixiecheGray {
-  width: 29px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -347px -2px;
-  vertical-align: middle;
-}
-
-.yixiecheBlue {
-  width: 29px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -347px 29px;
-  vertical-align: middle;
-}
-
-.yiwanchengGray {
-  width: 28px;
-  height: 31px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -417px 0px;
-  vertical-align: middle;
-}
-
-.yiwanchengBlue {
-  width: 28px;
-  height: 31px;
-  display: inline-block;
-  background: url(../../assets/image/yundanzhuangtai_icon.png) -417px 31px;
-  vertical-align: middle;
-}
-
-.daiquerenGray {
-  width: 31px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/daiquerenGray.png);
-  vertical-align: middle;
-}
-
-.daiquerenBlue {
-  width: 31px;
-  height: 28px;
-  display: inline-block;
-  background: url(../../assets/image/daiquerenBlue.png);
-  vertical-align: middle;
+.yellowTip {
+  position: absolute;
+  top: 1px;
+  left: 115px;
+  background-color: #FFE595;
+  color: #545F76;
+  font-size: 15px;
+  padding: 2px 10px;
+  border-radius: 4px;
 }

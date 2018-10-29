@@ -1,3 +1,5 @@
+import { Icon } from 'antd'
+import styles from '../layouts/index.css'
 // 全局接口
 export const IP = '/xtw'
 
@@ -27,6 +29,22 @@ export const LOGO = {
     logo: require('../assets/image/Group.png'),
   },
 }
+
+// 阿里图库
+export const IconFont = Icon.createFromIconfontCN({
+  scriptUrl: '//at.alicdn.com/t/font_867488_u3orqz38gh.js',
+})
+
+export const getIcon = icon => {
+  if (typeof icon === 'string' && icon.indexOf('http') === 0) {
+    return <img src={icon} alt="icon" className={`${styles.icon} sider-menu-item-img`} />
+  }
+  if (typeof icon === 'string') {
+    return <IconFont type={icon} />
+  }
+  return icon
+}
+
 
 // 菜单list
 export const menuData = [{
@@ -77,33 +95,33 @@ export const menuData = [{
 
 // 订单顶部tabs
 export const orderTabs = [{
-  name: 'quanbu',
+  name: 'icon-yingyongchengxu',
   value: '全部',
   status: '',
 }, {
-  name: 'daiqueren',
+  name: 'icon-qianshoushenpitongguo',
   value: '待确认',
+  status: '0',
+}, {
+  name: 'icon-yinhangqia',
+  value: '待支付',
   status: '1',
 }, {
-  name: 'daizhifu',
-  value: '待支付',
+  name: 'icon-1',
+  value: '待发货',
   status: '2',
 }, {
-  name: 'daifahuo',
-  value: '待发货',
+  name: 'icon-chaibaoguoqujian',
+  value: '待收货',
   status: '3',
 }, {
-  name: 'daishouhuo',
-  value: '待收货',
+  name: 'icon-youhuijuan',
+  value: '待结算',
   status: '4',
 }, {
-  name: 'daijiesuan',
-  value: '待结算',
-  status: '5',
-}, {
-  name: 'yijiesuan',
+  name: 'icon-zhengquewancheng-yuankuang',
   value: '已结算',
-  status: '6',
+  status: '5',
 }]
 
 

@@ -4,7 +4,9 @@ import { message } from 'antd'
 
 export default {
   namespace: 'global',
-  state: {},
+  state: {
+    showMap: false,
+  },
 
   subscriptions: {
     setup({dispatch, history}) {

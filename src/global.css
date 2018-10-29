@@ -36,9 +36,44 @@ body {
   vertical-align: middle;
 }
 
+/*滚动条样式*/
+::-webkit-scrollbar-thumb {
+  background-color: #e6e6e6;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
 /*antd样式覆盖*/
 .ant-card {
   border-radius: 4px;
+}
+
+.ant-table-pagination.ant-pagination {
+  text-align: center;
+  margin: 30px 0;
+  float: none;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active {
+  color: #3477ED !important;
+  font-weight: 600 !important;
+}
+
+.ant-steps-label-vertical .ant-steps-item-content {
+  margin-top: -52px !important;
+  margin-left: 3px !important;
+}
+
+.ant-steps-item-title {
+  font-size: 16px !important;
+}
+
+.ant-steps-item-process > .ant-steps-item-content > .ant-steps-item-title {
+  color: #3477ED !important;
+  font-weight: 600 !important;
 }
 
 /*登录页*/
@@ -46,4 +81,25 @@ body {
   margin-top: 20px;
   font-size: 16px;
   color: #ff4241;
+}
+
+/*下订单弹窗*/
+.orderModal .ant-modal-header {
+  background-color: #fff;
+  padding: 15px 24px;
+}
+
+.orderModal .ant-modal-close {
+  color: #D0D0D0;
+}
+
+.orderModal .ant-modal-title {
+  color: #545F76;
+  font-weight: 600;
+  padding-top: 6px;
+}
+
+.orderModal .ant-modal-close-x {
+  font-size: 20px;
+  line-height: 60px;
 }
